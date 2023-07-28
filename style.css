@@ -3,6 +3,7 @@
 :root {
     --main-dark: #004737;
     --main-light: #FFFBEC;
+    --main-white: #FFFFFF;
 }
 
 * {
@@ -15,6 +16,14 @@ body {
     font-family: 'Open Sans', 'sans-serif';
     background-color: var(--main-light);
     color: var(--main-dark);
+}
+
+/* Shadows */
+
+.grid-container,
+.settings-container,
+#gridSizeSlider {
+    box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.25);
 }
 
 /* Header */
@@ -54,10 +63,15 @@ body {
 }
 
 .grid {
+    display: grid;
     width: 550px;
     height: 550px;
     margin: 50px;
-    background-color: white;
+    background-color: var(--main-white);
+}
+
+.grid-element {
+    background-color: var(--main-white);
 }
 
 /* Settings */
