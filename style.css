@@ -57,7 +57,7 @@ body {
     width: 550px;
     height: 550px;
     margin: 50px;
-    background-color: var(--main-light);
+    background-color: white;
 }
 
 /* Settings */
@@ -69,9 +69,58 @@ body {
     height: 650px;
     gap: 30px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: var(--main-dark);
     border-radius: 10px;
+    padding: 25px 0;
+}
+
+#colorPicker {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#colorPicker::-webkit-color-swatch {
+    border-radius: 70px;
+    border: 2px solid var(--main-light);
+}
+
+#colorPicker::-moz-color-swatch {
+    border-radius: 70px;
+    border: 2px solid var(--main-light);
+}
+
+button {
+    background: none;
+    width: 150px;
+    height: 70px;
+    font-size: 24px;
+    color: var(--main-light);
+    border: 2px solid var(--main-light);
+    border-radius: 10px;
+    transition: transform 0.1s ease-in-out;
+}
+
+button:hover,
+#colorPicker:hover {
+    transform: scale(1.05);
+}
+
+button.active {
+    color: var(--main-dark);
+    background: var(--main-light);
+    transform: none;
+}
+
+#btnClear {
+    justify-self: flex-end;
+    margin-top: auto;
 }
 
 /* Slider */
@@ -85,7 +134,7 @@ body {
     margin-top: 20px;
 }
 
-.grid-size-slider {
+#gridSizeSlider {
     -webkit-appearance: none;
     appearance: none;
     width: 100%;
@@ -95,7 +144,7 @@ body {
     border-radius: 25px;
 }
 
-.grid-size-slider::-webkit-slider-thumb {
+#gridSizeSlider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
     width: 30px;
@@ -106,7 +155,7 @@ body {
     cursor: pointer;
 }
 
-.grid-size-value {
+#gridSizeValue {
     font-size: 24px;
     color: var(--main-dark);
 }
