@@ -68,7 +68,7 @@ function activateButton (newMode) {
     }
 }
 
-// Grid chage
+// Grid change
 
 function reloadGrid() {
     clearGrid();
